@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interação JS</title>
+    <title>Dados em JS</title>
     <style>
         body {
             font-size: 2em;
         }
-
         button {
             font-size: 2em;
             padding: 30px;
@@ -16,12 +15,13 @@
     </style>
 </head>
 <body>
-    <h1>Interagindo com um botão</h1>
-    <button onclick="clicou()">Clica em mim!</button>
+    <h1>Trabalhando com dados</h1>
+    <button onclick="inicio()">Clica em mim para começar</button>
 
     <script>
-        function clicou() {
-            alert('Você clicou no botão!')
+        function inicio() {
+            let nome = prompt('Qual é seu nome? ')
+            alert(`Olá ${nome}, é um prazer te conhecer!`)
         }
     </script>
 </body>
