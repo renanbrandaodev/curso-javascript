@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        button {
+            padding: 30px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados v2</h1>
+    <button onclick="inicio())">Clique aqui para começar</button>
+    <section id="resultado">
+        <p>Resultado</p>
+    </section>
+
+    <script>
+        function inicio() {
+            let nome = prompt('Qual é seu nome? ')
+            let res = document.getElementById('resultado')
+            res.innerHTML = `<p>Olá <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596;`
+        }
+
+    </script>
+</body>
+</html>
