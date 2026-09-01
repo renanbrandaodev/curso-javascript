@@ -19,14 +19,14 @@
 </head>
 <body>
     <h1>Trabalhando com dados v2</h1>
-    <button onclick="inicio())">Clique aqui para começar</button>
+    <button onclick="inicio()">Clique aqui para começar</button>
     <section id="resultado">
         <p>Resultado</p>
     </section>
 
     <script>
         function inicio() {
-            let nome  prompt('Qual é seu nome? ')
+            let nome = prompt('Qual é seu nome? ')
             let res = document.getElementById('resultado')
             res.innerHTML = `<p>Olá <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596;`
         }
