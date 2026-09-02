@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 005</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+
+        #bt {
+            padding: 20px;
+        }
+        
+        #container {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.300);
+            border-radius: 10px;
+            margin:auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #res {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Trabalhando com números</h1>
+        <button id="bt">Clique para calcular</button>
+        <div id="res">
+            <p>O resultado vem aqui...</p>
+        </div>
+    </div>
+
+
+    <script>
+        //alert(`Olá, seja vem vindo ao desafio 005!`);
+
+        let bt = document.getElementById('bt');
+
+        bt.addEventListener("click", clicar);
+        function clicar() {
+            numero = Number(prompt("Digite um número: "))
+            let res = document.querySelector('div#res');
+            res.innerHTML = `O dobro de ${numero} é ${numero*2} e a metade é ${numero/2}!`
+
+        }
+    </script>
+    
+</body>
+</html>
