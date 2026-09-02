@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 008</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+        #container {
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.300);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #bt {
+            padding: 20px;
+        }
+
+        #res {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Vários cálculos em JS</h1>
+        <button id="bt">Clique aqui para calcular</button>
+        <div id="res">
+            <p>O resultado vai aparecer aqui...</p>
+        </div>
+    </div>
+
+
+    <script>
+        let bt = document.getElementById('bt')
+        bt.addEventListener("click", clicar)
+        function clicar() {
+            let numero = Number(prompt("Digite um número:"))
+            let res = document.querySelector('div#res')
+            res.innerHTML = (`O número a ser analisado será ${numero}. `)
+            res.innerHTML+= ("<hr>")
+            res.innerHTML+= (`<p>Seu valor absoluto é ${Math.abs(numero)}.</p><p>A sua parte inteira é ${Math.trunc(numero)}.</p><p>O valor inteiro mais próximo é ${Math.round(numero)}.</p><p>A sua raiz quadrada é ${Math.sqrt(numero)}.</p><p>A sua raiz cúbica é ${Math.cbrt(numero)}</p><p>o valor de ${numero}² é ${numero ** 2}.</p><p>O valor de ${numero}³ é ${numero ** 3}.`)
+
+        }
+    </script>
+
+    
+</body>
+</html>
