@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Desafio das mensagens</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        #container1 {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.400);
+            padding: 20px;
+            text-align: center;
+
+        }
+        button {
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
+    <div id="container1">
+        <h1>Desafio das mensagens</h1>
+        
+            <button id="bt1">Botão 1</button>
+            <button id="bt2">Botão 2</button>
+            <button id="bt3">Botão 3</button>
+    </div>
     
+
+    <script>
+        let bt1 = document.getElementById("bt1");
+        let bt2 = document.getElementById("bt2");
+        let bt3 = document.getElementById("bt3");
+
+        bt1.addEventListener("click", clicar);
+        
+        function clicar() {
+            alert("Você clicou no 1º botão");
+        }
+
+        bt2.addEventListener("click", clicar2);
+
+        function clicar2() {
+            alert("Você clicou no 2º botão");
+        }
+
+        bt3.addEventListener("click", clicar3);
+
+        function clicar3() {
+            alert("Você clicou no 3º botão");
+        }
+
+    </script>
 </body>
 </html>
