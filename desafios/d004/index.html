@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de troco</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+
+        #bt1 {
+            font-weight: bold;
+            background-color: lightgray;
+            border: none;
+            padding: 20px;
+        }
+        #container {
+            padding: 20px;
+            border: 2px solid black;
+            text-align: center;
+            margin: auto;
+        }
+
+        #bt1:hover {
+            background-color: gray;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Calculadora de troco</h1>
+        <button id="bt1">Calcular Troco</button>
+    </div>
+
+
+
+    <script>
+        let produto = document.getElementById("bt1")
+
+        produto.addEventListener("click", clicar)
+        
+        function clicar() {
+            let produto = prompt("Qual produto você está comprando? ")
+            let valor = Number(prompt(`Quanto custa ${produto} que você está comprando? `));
+            let dinheiro = Number(prompt(`Qual foi o valor que você deu para pagar ${produto}? `));
+            let troco = dinheiro - valor;
+
+            let valorFormatado = valor.toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
+            let dinheiroFormatado = dinheiro.toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
+            let trocoFormatado = troco.toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
+            alert(`Você comprou ${produto} que custou ${valorFormatado}.\nVocê deu ${dinheiroFormatado} em dinheiro e vai receber ${trocoFormatado} de troco.\nVolte sempre!`);
+
+            
+
+        }
+
+    </script>
+    
+</body>
+</html>

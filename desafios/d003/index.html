@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e depois</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        #bt1 {
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <button id="bt1">Antecessor e Sucessor</button>
+
+
+    <script>
+        let bt1 = document.getElementById("bt1");
+        bt1.addEventListener("click", clicar);
+
+        function clicar() {
+            let numero = Number(prompt ("Digite um número inteiro qualquer: "));
+            let antecessor = parseInt(numero) - 1;
+            let sucessor = parseInt(numero) + 1;
+            alert(`Antes de ${numero}, temos o número ${antecessor}.\nDepois de ${numero}, temos o número ${sucessor}.`);
+        }
+    </script>
+    
+</body>
+</html>
