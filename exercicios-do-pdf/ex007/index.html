@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 007</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+        #container {
+            text-align: center;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.200);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        #bt {
+            padding: 20px;
+        }
+        #res {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Média do aluno v1.0</h1>
+        <button id="bt">Calcular média</button>
+        <div id="res">
+            <p>O resultado vai aparecer aqui...</p>
+        </div>
+    </div>
+    
+
+    <script>
+        let bt = document.getElementById('bt')
+        bt.addEventListener("click", clicar)
+        function clicar() {
+            let nome = prompt("Qual é o nome do aluno? ")
+            let nota1 = Number(prompt(`Qual foi a primeira nota do(a) ${nome}? `))
+            let nota2 = Number(prompt(`E qual foi a segunda nota de ${nome}? `))
+            let media = (nota1 + nota2) / 2;
+            let res = document.querySelector('div#res')
+            res.innerHTML = `Calculando a média final de ${nome}. `
+            res.innerHTML+= (`<p>As notas obtidas foram ${nota1} e ${nota2}.</p>`)
+            res.innerHTML+= (`A média final de ${nome} será de ${media}. `)
+        }
+    </script>
+</body>
+</html>
