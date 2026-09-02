@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 009</title>
     <style>
-
+        
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
         body {
@@ -40,25 +40,8 @@
             <p>O contador de cliques está com 0 cliques.</p>
         </div>
     </div>
+
+    <script src="scripts/script.js"></script>
     
-
-
-    <script>
-        let bt1 = document.getElementById('bt1')
-        let btzerar = document.getElementById('btzerar')
-        let contador = 0
-        let res = document.querySelector('p')
-        bt1.addEventListener("click", contar)
-        function contar() {
-            contador ++
-            res.innerHTML = (`O contador de cliques está com <mark>${contador}</mark> cliques.`)
-        }
-        btzerar.addEventListener("click", zerar)
-        function zerar() {
-            contador = 0
-            res.innerHTML = null
-        }
-        
-    </script>
 </body>
 </html>
