@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 006</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+        #bt {
+            padding: 20px;
+        }
+        #container {
+            position: relative;
+            top: 50px;
+            width: 80vw;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.300);
+            border-radius: 10px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Conversor de Temperaturas</h1>
+        <button id="bt">Converter</button>
+        <div id="res">
+            <p>Clique no botão acima para iniciar<p>
+        </div>
+    </div>
+
+
+    <script>
+        let bt = document.getElementById('bt')
+        let res = document.querySelector('p')
+        bt.addEventListener("click", converter)
+        function converter() {
+            let entrada = prompt("Digite uma temperatura em °C (Celsius)")
+            let tempC = Number(entrada.replace("," , "."))
+            let casas = {minimumFractionDigits: 1, maximumFractionDigits: 2 }
+            res.innerHTML = `A temperatura de ${tempC}°C, corresponde a: `
+            res.innerHTML += `<p>${(((tempC * 9/5) + 32).toLocaleString("pt-BR", casas))}°F (Fahrenheit)</p>`
+            res.innerHTML += `<p>${(((tempC + 273.15)).toLocaleString("pt-BR", casas))}°K (Kelvin)</p>`
+            
+        }
+
+    </script>
+</body>
+</html>
