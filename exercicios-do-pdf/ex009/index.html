@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 009</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+        body {
+            font-family: "JetBrains Mono", monospace;
+            font-size: 1.5em;
+        }
+        #bt1, #btzerar {
+            padding: 20px;
+        }
+
+        #container {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.300);
+            text-align: center;
+            padding: 20px;
+            width: 80vw;
+            margin:auto;
+            border-radius: 10px;
+        }
+
+        #container:hover {
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.600);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Contador de cliques</h1>
+        <button id="bt1">Clique em mim</button>
+        <button id="btzerar">Zerar o contador</button>
+        <div id="res">
+            <p>O contador de cliques está com 0 cliques.</p>
+        </div>
+    </div>
+    
+
+
+    <script>
+        let bt1 = document.getElementById('bt1')
+        let btzerar = document.getElementById('btzerar')
+        let contador = 0
+        let res = document.querySelector('p')
+        bt1.addEventListener("click", contar)
+        function contar() {
+            contador ++
+            res.innerHTML = (`O contador de cliques está com <mark>${contador}</mark> cliques.`)
+        }
+        btzerar.addEventListener("click", zerar)
+        function zerar() {
+            contador = 0
+            res.innerHTML = null
+        }
+        
+    </script>
+</body>
+</html>
