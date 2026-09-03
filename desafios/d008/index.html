@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 008</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            background-image: linear-gradient(to top, red, purple);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        #container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+            position: relative;
+            margin: auto;
+            width: 80vw;
+            top: 50px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        #bt {
+            font-weight: bold;
+            width: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Calcular desconto</h1>
+        <button id="bt">Aplicar desconto de 10%</button>
+        <div id="res">
+            <p>Clique no botão acima para iniciar.</p>
+        </div>
+    </div>
+
+    
+    <script>
+        let bt = document.getElementById('bt')
+        let res = document.querySelector('#res')
+
+        bt.addEventListener("click", calcularDesconto)
+
+        function calcularDesconto () {
+            let produto = prompt(`Qual é o produto que você está comprando? `)
+            let preçoProduto = prompt(`Qual é o preço de ${produto}? `)
+            let preçoProdutoReal = preçoProduto.replace(',', '.')
+            let desconto = (preçoProdutoReal * 10) / 100
+            const preçoFinal = preçoProdutoReal - desconto
+
+            res.innerHTML = (`<p><h2>Desconto de 10% para ${produto} calculado!</h2></p>`)
+            res.innerHTML += (`<p>O preço original era R$${preçoProdutoReal.toLocaleString('pt-BR', {maximumFractionDigits: 2, minimumFractionDigits: 2})}.</p>`)
+            res.innerHTML += (`<p>Você acaba de ganhar R$${desconto.toLocaleString('pt-BR', {maximumFractionDigits: 2, minimumFractionDigits: 2})} de desconto (-10%).</p>`)
+            res.innerHTML += (`<p>No fim, você vai pagar R$${preçoFinal.toLocaleString('pt-BR', {maximumFractionDigits:2 , minimumFractionDigits : 2})} no produto ${produto}.</p>` )
+
+            
+        }
+    </script>
+</body>
+</html>
