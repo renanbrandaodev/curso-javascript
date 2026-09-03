@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 009</title>
+    <style>
+        body {
+            margin:0px;
+            padding: 0px;
+            background-image: linear-gradient(to bottom, red, purple);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        #container {
+            border-radius: 20px;
+            width: 80vw;
+            position: relative;
+            top: 50px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.300);
+            text-align: center;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+        }
+        #bt {
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Reajuste Salarial</h1>
+        <button id="bt">Reajustar Salário</button>
+        <div id="res">
+            <p>Clique no botão acima para iniciar.</p>
+        </div>
+    </div>
+    
+
+    <script>
+        let bt = document.getElementById('bt')
+        let res = document.querySelector('#res')
+        bt.addEventListener("click", reajustar)
+
+        function reajustar () {
+            let nomeFunc = prompt(`Qual é o nome do funcionário?`)
+            let salFunc = Number(prompt(`Qual é o salário de ${nomeFunc}?`).replace(',', '.'))
+            let porcReajuste = Number(prompt(`O salário de ${nomeFunc} vai ser reajustado em qual porcentagem?`).replace(',', '.'))
+            let aumento = (salFunc * porcReajuste) / 100
+            let salFinal = salFunc + aumento
+
+            res.innerHTML = `<h2>${nomeFunc} recebeu um aumento salarial!</h2>`
+            res.innerHTML += `<p>O salário atual era ${salFunc.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.</p>`
+            res.innerHTML += `<p>Com um aumento de ${porcReajuste}%, o salário vai aumentar ${aumento.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} no próximo mês.</p>`
+            res.innerHTML += `<p>E a partir daí, ${nomeFunc} vai passar a ganhar ${salFinal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.</p>`
+        }
+    </script>
+</body>
+</html>
