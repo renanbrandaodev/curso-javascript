@@ -1,5 +1,7 @@
 # 📚 curso-javascript
 
+🔗 [Ver página online](https://renanbrandaodev.github.io/curso-javascript/)
+
 Repositório com os estudos e códigos desenvolvidos durante o **curso de JavaScript do [Curso em Vídeo](https://www.cursoemvideo.com/)**, ministrado pelo professor Gustavo Guanabara.
 
 Aqui estão os exercícios de fixação de cada aula, os exercícios propostos no PDF de apoio do curso e os desafios práticos concluídos ao longo do aprendizado, cobrindo desde a lógica básica de programação em JavaScript até manipulação do DOM e interação com o usuário.
