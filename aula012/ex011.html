@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de obrigatoriedade de voto</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to left, red, purple);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        #container {
+            text-align: center;
+            background-color: white;
+            position: relative;
+            width: 60vw;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.400);
+            top: 50px;
+            border-radius: 30px;
+        }
+        #res {
+            padding: 10px;
+        }
+        #idade, #bt {
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Verificar voto</h1>
+        <p>Verique de acordo com sua idade se o seu voto é obrigátorio.</p>
+        <input type="number" name="idadeN" id="idade" placeholder="Digite aqui sua idade">
+        <input type="button" value="Verificar" id="bt">
+        <div id="res"></div>
+    </div>
+    
+
+    <script>
+        let bt = document.getElementById('bt')
+        let idade = document.getElementById('idade')
+        let res = document.querySelector('#res')
+        bt.addEventListener("click", verificar)
+
+        function verificar() {
+            res.innerHTML = (`Você tem <strong>${idade.value}</strong> anos de idade.`)
+            if (idade.value < 16) {
+                res.innerHTML += (`<p>Você <strong>não</strong> vota.</p>`)
+            } else if (idade.value < 18 || idade.value > 65) {
+                res.innerHTML += (`<p>Seu voto é <strong>opcional</strong>.</p>`)
+            } else {
+                res.innerHTML += (`<p>Seu voto é <strong>obrigatório</strong>.</p>`)
+            }
+        }
+    </script>
+</body>
+</html>
