@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 010</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-image: linear-gradient(to top, purple, blue);
+            background-repeat: no-repeat;
+            height: 100vh;
+            place-content: center;
+        }
+
+        #container {
+            border-radius:  0px 50px;
+            background-color: white;
+            position:relative;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.500);
+            padding: 20px;
+            width: 75vw;
+            margin: auto;
+            text-align: center;
+        }
+
+        #bt {
+            font-weight: bold;
+            font-size: 1.3em;
+            width: 150px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1>Resolvendo Bhaskara</h1>
+            <button id="bt">Calcular</button>
+            <p>Considerando uma equação no formato <strong>a</strong>x² + <strong>b</strong>x + <strong>c</strong> = 0, aperte o botão acima para calcular o valor de Δ. </p>
+            <div id="res"></div>
+        </div>
+       
+    </div>
+    
+
+    <script>
+        let bt = document.getElementById('bt')
+        let res = document.querySelector('#res')
+
+        bt.addEventListener("click", calcular)
+
+        function calcular() {
+            let a = Number(prompt(`Qual é o valor de a?`))
+            let b = Number(prompt(`Qual é o valor de b?`))
+            let c = Number(prompt(`Qual é o valor de c?`)) 
+            let delta= (b**2) - 4*a*c;
+
+            res.innerHTML = (`<h2> Resolvendo Bhaskara</h2>`)
+            res.innerHTML += (`A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong>`)
+            res.innerHTML += (`<p>O cálculo realizado será <strong>Δ = ${b}² - 4. ${a} . ${c}</p></strong>` )
+            res.innerHTML += (`<p>O valor calculado foi <strong>Δ = <mark>${delta}</mark></strong>`)
+
+        }
+    </script>
+</body>
+</html>

@@ -56,7 +56,7 @@
             let desconto = (preçoProdutoReal * 10) / 100
             const preçoFinal = preçoProdutoReal - desconto
 
-            res.innerHTML = (`<p><h2>Desconto de 10% para ${produto} calculado!</h2></p>`)
+            res.innerHTML = (`<h2>Desconto de 10% para ${produto} calculado!</h2>`)
             res.innerHTML += (`<p>O preço original era R$${preçoProdutoReal.toLocaleString('pt-BR', {maximumFractionDigits: 2, minimumFractionDigits: 2})}.</p>`)
             res.innerHTML += (`<p>Você acaba de ganhar R$${desconto.toLocaleString('pt-BR', {maximumFractionDigits: 2, minimumFractionDigits: 2})} de desconto (-10%).</p>`)
             res.innerHTML += (`<p>No fim, você vai pagar R$${preçoFinal.toLocaleString('pt-BR', {maximumFractionDigits:2 , minimumFractionDigits : 2})} no produto ${produto}.</p>` )
