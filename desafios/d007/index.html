@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 007</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.5em;
+            background-image:linear-gradient(to top, red, purple);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        #bt {
+            padding: 20px;
+        }
+        #container {
+            background-color: white;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.300);
+            border-radius: 10px 0px 10px 0px;
+            width: 70vw;
+            margin: auto;
+            padding: 20px;
+            top: 40px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Conversor R$ --> US$</h1>
+        <button id="bt">Converter</button>
+        <div id="res">
+            <p>Clique no botão acima para iniciar a conversão.</p>
+        </div>
+    </div> 
+    
+    
+    <script>
+        const bt = document.getElementById('bt')
+        const res = document.querySelector('#res')
+       
+      let cotação = prompt(`Olá! Antes de mais nada, informe qual é a cotação do dólar hoje: `)
+      let cotaçãoConvertida = Number(cotação.replace(',', '.'))
+      bt.addEventListener("click", converter)
+      function converter() {
+        let real = Number(prompt(`Quantos R$ você tem na carteira?`))
+        let realConvertido = real / cotaçãoConvertida
+        res.innerHTML = `<p>Com R$${real.toLocaleString('pt-BR',{minimumFractionDigits: 2, maximumFractionDigits: 2})} você possui U$${realConvertido.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}.</p>`
+      }
+
+    </script>
+</body>
+</html>
