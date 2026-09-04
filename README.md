@@ -17,6 +17,12 @@ Aqui estão os exercícios de fixação de cada aula, os exercícios propostos n
 | Aula 06 | [ex005](aula006/ex005.html) | Primeiros passos com DOM |
 | Aula 10 | [ex006](aula010/ex006.html) | Eventos DOM |
 | Aula 10 | [ex007](aula010/ex007.html) | Somando números |
+| Aula 11 | [ex008](aula011/ex008.js) | Estrutura condicional `if` |
+| Aula 11 | [ex009](aula011/ex009.js) | Condicional `if/else` |
+| Aula 11 | [ex010](aula011/ex010.html) | Sistema de multas com DOM |
+| Aula 12 | [ex011](aula012/ex011.js) | Condicionais encadeadas (`else if`) |
+| Aula 12 | [ex012](aula012/ex012.js) | Saudação conforme o horário |
+| Aula 12 | [ex013](aula012/ex013.js) | Estrutura `switch case` |
 
 ## 🧩 Exercícios do PDF de apoio
 
