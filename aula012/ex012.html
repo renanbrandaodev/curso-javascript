@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio datas/horas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to top, red, purple);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        #container {
+            background-color: white;
+            position: relative;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.300);
+            border-radius: 30px;
+            width: 60vw;
+            padding: 25px;
+            text-align: center;
+            top: 100px;
+            font-size: 2em;
+        }
+        #res {
+            padding: 10px;
+        }
+        #bt {
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Horas</h1>
+        <button id="bt">Clique aqui</button>
+        <div id="res">
+            <p>O resultado vai aparecer aqui :D</p>
+        </div>
+    </div>   
+
+
+    <script>
+        let bt = document.getElementById('bt')
+        let res = document.getElementById('res')
+        let agora = new Date()
+        let hora = agora.getHours()
+        bt.addEventListener("click", clicou)
+
+        function clicou() {
+            res.innerHTML = (`Agora são por volta das ${hora} horas.`)
+            if (hora > 0 && hora < 5) {
+            res.innerHTML += (`<p>Boa madrugada!</p>`)
+            } else if (hora < 12) {
+                res.innerHTML += (`<p>Bom dia!</p>`)
+            } else if (hora <= 18) {
+                res.innerHTML += (`<p>Boa tarde!</p>`)
+            } else {
+                res.innerHTML += (`<p>Boa noite!</p>`)
+            }       
+        }
+    </script>
+</body>
+</html>
