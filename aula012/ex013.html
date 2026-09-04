@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio dia da Semana</title>
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            background-image: linear-gradient(45deg, pink, purple, blue);
+            
+        }
+        #container {
+            background-color: white;
+            margin: auto;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.500);
+            width: 75vw;
+            border-radius: 20px 0px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        #bt {
+            color: white;
+            background-image: linear-gradient(to top, rgba(128, 0, 128, 0.425), rgba(255, 0, 0, 0.422));
+            border-radius: 20px 0px;
+            padding: 20px;
+            font-weight: bold;
+            text-shadow: 0px 0px 3px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Dia da semana</h1>
+        <p>Clique para saber o dia da semana!</p>
+        <button id="bt">Clique aqui</button>
+        <div id="res">
+        
+        </div>
+    </div>
+    
+
+    <script>
+        let bt = document.getElementById('bt')
+        let res = document.getElementById('res')
+        let agora = new Date()
+        let diaSem = agora.getDay()
+        bt.addEventListener("click", clicar)
+
+        function clicar() {
+            switch(diaSem) {
+                case 0:
+                    res.innerHTML = (`<p>Hoje é <strong>Domingo</strong>!</p><p><strong>Curiosidade</strong>: O nome Domingo vem do latim "dies dominicus", "dia do Senhor", por isso os outros dias em português foram renomeados como "feira" (dia de trabalho/negócio).</p>`)
+                break
+                case 1: 
+                    res.innerHTML = (`<p>Hoje é <strong>Segunda-feira</strong>!</p><p><strong>Curiosidade</strong>: O nome Segunda-feira vem do latim "dies lunae", dia da Lua, mas em português foi substituído por causa da Igreja Católica, que numerou os dias após o domingo.</p>`)
+                break
+                case 2:
+                    res.innerHTML = (`<p>Hoje é <strong>Terça-feira</strong>!</p><p><strong>Curiosidade</strong>: A Terça-feira é considerada dia de azar em vários países de língua espanhola ("martes trece" = terça-feira 13), ao contrário do inglês, onde é a sexta-feira 13.</p>`)
+                break
+                case 3:
+                    res.innerHTML = (`<p>Hoje é <strong>Quarta-feira</strong>!</p><p><strong>Curiosidade</strong>: Quarta-feira em inglês se chama "Wednesday", em homenagem ao deus nórdico Odin (Woden).</p>`)
+                break
+                case 4:
+                    res.innerHTML = (`<p>Hoje é <strong>Quinta-feira</strong>!</p><p><strong>Curiosidade</strong>: Quinta-feira era o dia dedicado a Júpiter/Thor entre romanos e povos germânicos — daí "Thursday" (dia de Thor)</p>`)
+                break
+                case 5:
+                    res.innerHTML = (`<p>Hoje é <strong>Sexta-feira</strong>!</p><p><strong>Curiosidade</strong>: A Sexta-feira antigamente era considerado dia de má sorte para iniciar viagens longas ou casamentos em várias culturas europeias.</p>`)
+                break
+                case 6:
+                    res.innerHTML = (`<p>Hoje é <strong>Sábado</strong>!</p><p><strong>Curiosidade</strong>: Sábado é o único dia da semana em português que não vem de um planeta/deus, e sim do hebraico "shabbat" (dia de descanso).</p>`)
+                break
+                default:
+                    res.innerHTML = (`Erro: dia inválido`)
+                break
+            }
+        }
+    </script>
+</body>
+</html>
