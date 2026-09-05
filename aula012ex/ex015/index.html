@@ -13,22 +13,22 @@
     <section>
             <div id="anoNasc">
                 <p>Ano de nascimento: 
-                <input type="number" name="anoNasc" id="ano"></p>
+                <input type="number" name="ano" id="anoN" min="0"></p>
             </div>
 
             <div id="sexo">
                 <p>Sexo: 
-                    <input type="checkbox" name="sexomasc" id="masc"><label for="masc">Masculino</label>
-                    <input type="checkbox" name="sexofem" id="fem"><label for="fem">Feminino</label>
+                    <input type="radio" name="opcao" value="sexomasc" id="masc"checked><label for="masc">Masculino</label>
+                    <input type="radio" name="opcao" value="sexofem" id="fem"><label for="fem">Feminino</label>
                 </p>
             </div>
             
             <div id="botao">
-                <button id="bt">Verificar</button>
+                <button id="bt" onclick="verificar()">Verificar</button>
             </div>
 
             <div id="res">
-                
+                Preencha os dados acima para ver o resultado!
             </div>
 
     </section>
