@@ -17,9 +17,20 @@ section {
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.500);
 }
+#bt {
+    font-weight: bold;
+    padding: 15px;
+    width: 150px;
+}
 div {
     text-align: center;
     padding: 10px;
+}
+#res {
+    padding: 20px;
+}
+img {
+    padding: 30px;
 }
 
 footer {
