@@ -23,6 +23,8 @@ Aqui estão os exercícios de fixação de cada aula, os exercícios propostos n
 | Aula 12 | [ex011](aula012/ex011.html) | Condicionais encadeadas (`else if`) |
 | Aula 12 | [ex012](aula012/ex012.html) | Saudação conforme o horário |
 | Aula 12 | [ex013](aula012/ex013.html) | Estrutura `switch case` |
+| Aula 12 | [ex014](aula012ex/ex014/modelo.html) | Exibindo imagem e mensagem conforme o horário do dia |
+| Aula 12 | [ex015](aula012ex/ex015/index.html) | Verificador de idade com imagem conforme sexo e faixa etária |
 
 ## 🧩 Exercícios do PDF de apoio
 
