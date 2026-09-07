@@ -19,10 +19,17 @@ function contar() {
         }
         res.innerHTML = ''
         let numeros = []
-        while(i <= f) { 
-        numeros.push(i)
-        i += p 
+        if (i <= f) {
+            while (i <= f) {
+                numeros.push(i)
+                i += p
+            }
+        } else {
+            while (i >= f) {
+                numeros.push(i)
+                i -= p
+            }
         }
-        res.innerHTML = numeros.join(` ->  `)
+        res.innerHTML = numeros.join(' ->  ')
     }
 }
