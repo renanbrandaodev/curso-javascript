@@ -1,9 +1,8 @@
+let bt = document.getElementById('bt')
 bt.addEventListener("click", gerar)
 
 function gerar() {
-    let bt = document.getElementById('bt')
     let numero = document.getElementById('num').value
-    
     res.innerHTML = '';
     if (numero === "" || isNaN(numero)){
             alert(`Por favor digite um número.`)
