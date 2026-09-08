@@ -19,10 +19,12 @@ function contar(){
     }
     res.innerHTML = ``
     res.innerHTML += "Resultado:<br>"
+    //Contagem progressiva
     if (c <=f){
         for(let c = i; c <= f; c += p)
         res.innerHTML += ` ➡️${c} `
     } else {
+        //Contagem regressiva
         if (c >= f) {
             for(let c = i; c >= f; c -=p)
             res.innerHTML += ` ➡️ ${c}  `

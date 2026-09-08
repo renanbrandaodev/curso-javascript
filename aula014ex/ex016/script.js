@@ -19,11 +19,13 @@ function contar() {
         }
         res.innerHTML = ''
         let numeros = []
+        //Contagem progressiva
         if (i <= f) {
             while (i <= f) {
                 numeros.push(i)
                 i += p
             }
+            //Contagem regressiva
         } else {
             while (i >= f) {
                 numeros.push(i)
