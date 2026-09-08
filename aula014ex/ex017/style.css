@@ -1,6 +1,8 @@
 body {
     background-color: rgb(0, 72, 255);
     font: normal 1.5em Arial;
+    width: 80vw;
+    margin: auto;
 }
 
 header {
@@ -16,6 +18,24 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.500);
+
+    
+}
+#res {
+    margin: auto;
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    height: 200px;
+    width: 150px;
+    overflow-y: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.200);
+    
+}
+#bt {
+    font-weight: bold;
 }
 
 footer {

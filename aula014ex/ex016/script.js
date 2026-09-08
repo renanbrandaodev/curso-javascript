@@ -30,6 +30,8 @@ function contar() {
                 i -= p
             }
         }
-        res.innerHTML = numeros.join(' ->  ')
+        res.innerHTML += "Resultado: " + numeros.join(' ➡️ ') + '➡️ '  + '🏁';
+        
+        
     }
 }
