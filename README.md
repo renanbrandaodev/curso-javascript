@@ -25,6 +25,10 @@ Aqui estão os exercícios de fixação de cada aula, os exercícios propostos n
 | Aula 12 | [ex013](aula012/ex013.html) | Estrutura `switch case` |
 | Aula 12 | [ex014](aula012ex/ex014/modelo.html) | Exibindo imagem e mensagem conforme o horário do dia |
 | Aula 12 | [ex015](aula012ex/ex015/index.html) | Verificador de idade com imagem conforme sexo e faixa etária |
+| Aula 13 | [ambiente](aula013/ambiente.js) | Laço de repetição `do...while` |
+| Aula 14 | [ambiente](aula014/ambiente.js) | Laço de repetição `for` |
+| Aula 14 | [ex016](aula014ex/ex016/modelo.html) | Super contador com início, fim e passo personalizáveis |
+| Aula 14 | [ex017](aula014ex/ex017/modelo.html) | Gerador de tabuada com laço `for` |
 
 ## 🧩 Exercícios do PDF de apoio
 
