@@ -1,7 +1,7 @@
 let num = [2, 4, 6, 8]
 console.log(num)
 console.log(`O vetor tem ${num.length} posições.`)
-let pos = num.indexOf(8)
+let pos = num.indexOf(2)
 if(pos == -1){
      console.log(`Valor não encontrado.`)
  } else {
